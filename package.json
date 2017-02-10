@@ -3,10 +3,11 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"start": "env $(cat .env | xargs) node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest"
 	},
 	"dependencies": {
+		"babel-plugin-transform-inline-environment-variables": "^0.0.2",
 		"enzyme": "^2.7.1",
 		"mocha": "^3.2.0",
 		"react": "~15.4.0",

@@ -22,7 +22,7 @@ class AppContainer extends Component {
         I am App container. Count: {this.state.count}
       </Text>
       <TouchableHighlight onPress={() => { this.props.incrementCount() }}>
-      <Text>Add</Text>
+      <Text>{ process.env.MY_VAR }</Text>
       </TouchableHighlight>
     </View>
   }

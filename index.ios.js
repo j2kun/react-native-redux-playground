@@ -14,9 +14,11 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 
-import reducer from './app/reducers'
-import AppContainer from './app/containers/AppContainer.js'
+import reducer from './js/reducers'
+import AppContainer from './js/containers/AppContainer.js'
+import setupEnv from './js/env.js'
 
+setupEnv();
 
 function configureStore(initialState) {
   const middlewares = [thunkMiddleware];
@@ -34,9 +36,9 @@ const store = configureStore({});  // initial state goes here (or cache)
 
 
 const App = () => (
-    <Provider store={store}>
-        <AppContainer />
-    </Provider>
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>
 )
 
 AppRegistry.registerComponent('todo', () => App);
