@@ -10,6 +10,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import ActionCreators from '../actions'
 
+import { MY_VAR } from 'react-native-dotenv'
+
 class AppContainer extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +24,7 @@ class AppContainer extends Component {
         I am App container. Count: {this.state.count}
       </Text>
       <TouchableHighlight onPress={() => { this.props.incrementCount() }}>
-      <Text>{ process.env.MY_VAR }</Text>
+      <Text>{ MY_VAR }</Text>
       </TouchableHighlight>
     </View>
   }

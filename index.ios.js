@@ -16,9 +16,6 @@ import thunkMiddleware from 'redux-thunk';
 
 import reducer from './js/reducers'
 import AppContainer from './js/containers/AppContainer.js'
-import setupEnv from './js/env.js'
-
-setupEnv();
 
 function configureStore(initialState) {
   const middlewares = [thunkMiddleware];
